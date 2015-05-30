@@ -32,11 +32,13 @@ wptheme_staging: '<your wordpress installation theme directory>'
 
 6. Open command prompt and run the command "npm install", this will download all the required node modules to the root.
 
-7. Go to the repository root folder and run grunt. The grunt tasks should be completed successfully.
+7. Delete the "delete-me.txt" file inside the "mytheme" folder.
 
-8. You can browse through the wordpress admin page and change theme to the one which you have copied to the theme directory.
+8. Go to the repository root folder and run grunt. The grunt tasks should be completed successfully.
 
-9. Now you are set to start developing the wordpress theme.
+9. You can browse through the wordpress admin page and change theme to the one which you have copied to the theme directory.
+
+10. Now you are set to start developing the wordpress theme.
 
 
 ## Pre-requesties
