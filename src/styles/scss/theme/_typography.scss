@@ -1,0 +1,93 @@
+// --------------------------
+// Base
+// --------------------------
+
+// Base font face definition
+@include font-face("Roboto", $base-font-regular-url, $file-formats: ttf eot svg woff);
+@include font-face("Roboto", $base-font-italic-url, normal, italic, $file-formats: ttf eot svg woff);
+@include font-face("Roboto", $base-font-bold-url, bold, $file-formats: ttf eot svg woff); 
+@include font-face("Roboto", $base-font-bold-italic-url, bold, italic, $file-formats: ttf eot svg woff); 
+
+
+// Serif font face definition
+@include font-face("PlayfairDisplay", $base-font-serif-regular-url, $file-formats: ttf eot svg woff);
+@include font-face("PlayfairDisplay", $base-font-serif-italic-url, normal, italic, $file-formats: ttf eot svg woff);
+@include font-face("PlayfairDisplay", $base-font-serif-bold-url, bold, $file-formats: ttf eot svg woff); 
+@include font-face("PlayfairDisplay", $base-font-serif-bold-italic-url, bold, italic, $file-formats: ttf eot svg woff); 
+
+
+// Icon font face definition
+@include font-face("virtuostic-icons", $icon-font-url, $file-formats: ttf eot svg woff);
+
+[data-icon]:before {
+  font-family: $font-family-icon;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none !important;
+}
+.icon:before,
+[class*="icon"]:before,
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: $font-family-icon;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none !important;
+}
+
+
+[class*="icon"]:hover, *:hover [class*="icon"] {
+  text-decoration: none;
+}
+
+a > [class*="icon"] {
+  margin-right: .6rem;
+}
+
+.icon-power-off:before {
+  content: "a";
+}
+.icon-check-mark:before {
+  content: "b";
+}
+.icon-pin-map:before {
+  content: "c";
+}
+.icon-call-phone:before {
+  content: "d";
+}
+.icon-ptint:before {
+  content: "e";
+}
+.icon-email-envelope:before {
+  content: "f";
+}
+.icon-facebook:before {
+  content: "g";
+}
+.icon-twitter:before {
+  content: "h";
+}
+.icon-linkedin:before {
+  content: "i";
+}
+.icon-social-youtube:before {
+  content: "j";
+}
+.icon-google-plus:before {
+  content: "k";
+}
+.icon-quote-left:before {
+  content: "l";
+}

@@ -1,0 +1,97 @@
+//--------------------------------------------
+// Typography
+//--------------------------------------------
+
+$base-font-regular-url:				'../fonts/roboto/Roboto-Light';
+$base-font-italic-url: 				'../fonts/roboto/Roboto-LightItalic';
+$base-font-bold-url: 				'../fonts/roboto/Roboto-Medium';
+$base-font-bold-italic-url:			'../fonts/roboto/Roboto-MediumItalic';
+
+$base-font-serif-regular-url:		'../fonts/playfairdisplay/PlayfairDisplay-Regular';
+$base-font-serif-italic-url: 		'../fonts/playfairdisplay/PlayfairDisplay-Italic';
+$base-font-serif-bold-url: 			'../fonts/playfairdisplay/PlayfairDisplay-Bold';
+$base-font-serif-bold-italic-url:	'../fonts/playfairdisplay/PlayfairDisplay-BoldItalic';
+
+$icon-font-url:				'../fonts/icons/virtuostic-icons';
+
+$font-family-sans-serif:	'Roboto', Helvetica, Arial, sans-serif;
+$font-family-serif:			'PlayfairDisplay', 'Times New Roman', Georgia, serif;
+$font-family-icon:			'virtuostic-icons' !important;
+
+$font-family-base: 			$font-family-sans-serif;
+$font-family-secondary:		$font-family-serif;
+
+$theme-font-size-base:		14px !default;
+$theme-font-size-medium: 	ceil(($theme-font-size-base * 1.30)) !default; 
+$theme-font-size-large: 	ceil(($theme-font-size-base * 1.60)) !default; 
+$theme-font-size-xlarge: 	ceil(($theme-font-size-base * 2)) !default; 
+$theme-font-size-small: 	ceil(($theme-font-size-base * 0.90)) !default; 
+
+$theme-line-height-base:	1.428571429 !default;
+$theme-line-height-large:   1.3333333 !default; // extra decimals for Win 8.1 Chrome
+$theme-line-height-small:   1.2 !default;
+
+$theme-font-weight-normal: 	300 !default;
+$theme-font-weight-bold: 	700 !default;
+
+//--------------------------------------------
+// Colors
+//--------------------------------------------
+
+// Primary Colors
+$theme-color-black: 		#0e0a09;
+$theme-color-white: 		rgb(255,255,255);
+$theme-color-darkgrey:		#221e1b;
+$theme-color-mediumgrey:	#7c7c7c;
+$theme-color-lightgrey:		#d1d1d1;
+$theme-color-red:			#ff232d;
+$theme-color-gold:			#d5b272;
+
+// Secondary Colors
+
+// Generic Colors
+
+
+// Notification colors
+$error: 					#f95355;
+$success: 					#66be68;
+$warning: 					orange;
+$info: 						#209cc7;
+$selected: 					lighten(orange, 48%);
+
+// Body
+$theme-body-bg: 			$theme-color-black;
+$theme-body-fg: 			$theme-color-lightgrey;
+
+//--------------------------------------------
+// Helpers
+//--------------------------------------------
+
+// Spacing variables
+$spacing-base-vertical:     6px !default;
+$spacing-base-horizontal:   12px !default;
+
+$spacing-large-vertical:    24px !default;
+$spacing-large-horizontal:  32px !default;
+
+$spacing-small-vertical:    3px !default;
+$spacing-small-horizontal:  10px !default;
+
+$spacing-xs-vertical:       1px !default;
+$spacing-xs-horizontal:     5px !default;
+
+$spacing-section:			$spacing-large-vertical * 2;
+
+
+// Icon Characters
+
+
+
+//--------------------------------------------
+// Graphics media
+//--------------------------------------------
+$theme-image-path:'../img/';
+$theme-main-logo-image: $theme-image-path + 'logo-virtuosic-arts.png';
+$theme-music-symbol-small-image: $theme-image-path + 'img-music-symbol-small.png';
+$theme-music-symbol-large-image: $theme-image-path + 'img-music-symbol-large.png';
+$theme-symbol-quotes: $theme-image-path + 'symbol-quotes.png';

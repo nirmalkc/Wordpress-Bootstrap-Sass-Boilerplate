@@ -1,0 +1,35 @@
+// Helper classes
+.padding-none 				{ padding:0 !important; }
+.padding-left-none 			{ padding-left:0 !important; }
+.padding-right-none 		{ padding-right:0 !important; }
+.padding-top-none 			{ padding-top:0 !important; }
+.padding-bottom-none 		{ padding-bottom:0 !important; }
+.padding-vertical-none 		{ padding-top:0 !important; padding-bottom:0 !important;}
+.padding-horizontal-none 	{ padding-left:0 !important; padding-right:0 !important;}
+
+.margin-none 				{ margin: 0 !important; }
+.margin-top-none 			{ margin-top: 0 !important; }
+.margin-right-none 			{ margin-right: 0 !important; }
+.margin-bottom-none 		{ margin-bottom: 0 !important; }
+.margin-left-none 			{ margin-left: 0 !important; }
+.margin-vertical-none 		{ margin-top: 0 !important; margin-bottom: 0 !important;}
+.margin-horizontal-none 	{ margin-left: 0 !important; margin-right: 0 !important; }
+
+.spacing-h-in-sm			{ padding-left: $spacing-small-horizontal; padding-right: $spacing-small-horizontal; }
+.spacing-h-in-md			{ padding-left: $spacing-base-horizontal; padding-right: $spacing-base-horizontal; }
+.spacing-h-in-lg			{ padding-left: $spacing-large-horizontal; padding-right: $spacing-large-horizontal; }
+.spacing-v-in-sm			{ padding-top: $spacing-small-horizontal; padding-bottom: $spacing-small-horizontal; }
+.spacing-v-in-md			{ padding-top: $spacing-base-horizontal; padding-bottom: $spacing-base-horizontal; }
+.spacing-v-in-lg			{ padding-top: $spacing-large-horizontal; padding-bottom: $spacing-large-horizontal; }
+
+.spacing-h-out-sm			{ margin-left: $spacing-small-horizontal; margin-right: $spacing-small-horizontal; }
+.spacing-h-out-md			{ margin-left: $spacing-base-horizontal; margin-right: $spacing-base-horizontal; }
+.spacing-h-out-lg			{ margin-left: $spacing-large-horizontal; margin-right: $spacing-large-horizontal; }
+.spacing-v-out-sm			{ margin-top: $spacing-small-horizontal; margin-bottom: $spacing-small-horizontal; }
+.spacing-v-out-md			{ margin-top: $spacing-base-horizontal; margin-bottom: $spacing-base-horizontal; }
+.spacing-v-out-lg			{ margin-top: $spacing-large-horizontal; margin-bottom: $spacing-large-horizontal; }
+
+.text-center { text-align: center;}
+.text-left 	 { text-align: left;}
+
+.full-width		{width:100%;}

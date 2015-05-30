@@ -1,0 +1,136 @@
+// --------------------------
+// Base
+// --------------------------
+
+body {
+	font-family: $font-family-base;
+	font-size: $theme-font-size-base;
+	background: $theme-body-bg;
+	color: $theme-body-fg;
+}
+
+body:before {
+	content:"";
+	position: absolute;
+	@include box-size(358px, 445px);
+	background: url($theme-music-symbol-large-image) left top no-repeat;
+	top: 400px;
+}
+
+body:after {
+	content:"";
+	position: absolute;
+	@include box-size(355px, 206px);
+	background: url($theme-music-symbol-small-image) left top no-repeat;
+	top:0; right: 0; 
+	z-index: -1;
+}
+
+// Left align the page contents
+body .container:nth-child(1) { margin-left:0;}
+
+// Headings
+
+h1,h2,h3,h4,h5,h6 { 
+	font-weight: $theme-font-weight-normal; 
+	font-size: $theme-font-size-large; 
+	clear: both;
+	color: $theme-color-gold;
+}
+.heading-1 { font-size: $theme-font-size-base * 2; }
+.heading-2 { 
+	font-family: $font-family-secondary;
+	font-size: $theme-font-size-base * 1.8;
+	margin-bottom: $theme-font-size-base * 1.6;
+}
+.heading-3 { 
+	font-family: $font-family-base;
+	font-size: $theme-font-size-base * 1.2; 
+	font-weight: $theme-font-weight-bold;
+	color: $theme-color-white;
+}
+.heading-4 { font-size: $theme-font-size-base * 1.4; }
+.heading-5 { font-size: $theme-font-size-base * 1.2; }
+.heading-6 { font-size: $theme-font-size-base; }
+
+
+hr { 
+	margin:$spacing-large-vertical 0; 
+	$border-color: lighten($theme-color-darkgrey, 10%);
+	border-color: $border-color;
+	position: relative; 
+
+	&:before {
+		content:'';
+		position: absolute;
+		@include box-size(0);
+		top:-23px; left: calc(50% - 2px);
+		border: 5px solid transparent;
+		border-bottom-color: $border-color;
+		line-height: 0;
+		position: relative;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		left: calc(50% - 2px);
+		top: 0;
+		@include box-size(0);
+		border: 5px solid transparent;
+		border-top-color: $border-color;
+		line-height: 0;
+	}
+
+	&.no-sign {
+		&:before, &:after { display: none; }
+	}
+
+	&.spacing-small {
+		margin: ($spacing-base-vertical * 2) 0;
+	}
+}
+
+p {	
+	margin-bottom: $spacing-large-vertical;
+	font-weight: $theme-font-weight-normal;
+	font-size: $theme-font-size-base;
+}
+
+small {
+	font-size: $theme-font-size-small;
+}
+
+section img, [class="col-"] img {
+	@include box-size(100%, auto);
+}
+
+.media-object-home {
+	height: 132px; 
+	overflow: hidden;
+	border-bottom: solid 2px $theme-color-gold;
+	margin-bottom: 1rem;
+	
+}
+
+p + a>.media-object-home {
+	margin-top: .8rem;
+}
+
+blockquote {
+	border:0; text-align: center;
+	margin-bottom: 4rem; 
+	&:before {
+		position: relative; text-align: center;
+		font-size: $theme-font-size-large;
+		color: darken($theme-color-gold,30%);
+
+		@extend .icon;
+		@extend .icon-quote-left;
+	}
+	p { font-family: $font-family-serif; font-size: $theme-font-size-medium; font-style: italic; margin-bottom: 1rem;}
+
+	.quoter {
+		color: $theme-color-gold;
+		&:before {content:"";}
+	}
+}
