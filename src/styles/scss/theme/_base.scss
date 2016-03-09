@@ -9,26 +9,6 @@ body {
 	color: $theme-body-fg;
 }
 
-body:before {
-	content:"";
-	position: absolute;
-	@include box-size(358px, 445px);
-	background: url($theme-music-symbol-large-image) left top no-repeat;
-	top: 400px;
-}
-
-body:after {
-	content:"";
-	position: absolute;
-	@include box-size(355px, 206px);
-	background: url($theme-music-symbol-small-image) left top no-repeat;
-	top:0; right: 0; 
-	z-index: -1;
-}
-
-// Left align the page contents
-body .container:nth-child(1) { margin-left:0;}
-
 // Headings
 
 h1,h2,h3,h4,h5,h6 { 
@@ -54,39 +34,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 hr { 
-	margin:$spacing-large-vertical 0; 
-	$border-color: lighten($theme-color-darkgrey, 10%);
-	border-color: $border-color;
-	position: relative; 
-
-	&:before {
-		content:'';
-		position: absolute;
-		@include box-size(0);
-		top:-23px; left: calc(50% - 2px);
-		border: 5px solid transparent;
-		border-bottom-color: $border-color;
-		line-height: 0;
-		position: relative;
-	}
-	&:after {
-		content: '';
-		position: absolute;
-		left: calc(50% - 2px);
-		top: 0;
-		@include box-size(0);
-		border: 5px solid transparent;
-		border-top-color: $border-color;
-		line-height: 0;
-	}
-
-	&.no-sign {
-		&:before, &:after { display: none; }
-	}
-
-	&.spacing-small {
-		margin: ($spacing-base-vertical * 2) 0;
-	}
+	
 }
 
 p {	
