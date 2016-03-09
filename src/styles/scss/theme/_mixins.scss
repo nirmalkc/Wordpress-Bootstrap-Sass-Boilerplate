@@ -4,31 +4,31 @@
 
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
-	font-size: ($sizeValue * 16) + px;
-	font-size: $sizeValue + rem;
+  font-size: ($sizeValue * 16) + px;
+  font-size: $sizeValue + rem;
 }
 
 // Center block
 @mixin center-block {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // Clearfix
 @mixin clearfix() {
-	&:before, &:after {
-		content: "";
-		display: table;
-	}
-	&:after {
-		clear:both;
-	}
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear:both;
+  }
 }
 
 // Clear after (not all clearfix need this also)
 @mixin clearfix-after() {
-	clear: both;
+  clear: both;
 }
 
 
@@ -157,6 +157,13 @@
 }
 
 
+// Grayscale
+@mixin grayscale($value) {
+    -webkit-filter: #{"grayscale(#{$value})"};
+    -moz-filter: #{"grayscale(#{$value})"};
+    filter:#{"grayscale(#{$value})"};
+}
+
 // Functions
 
 // Black and white
@@ -167,15 +174,6 @@
     @return rgba(255,255,255,$opacity);
 }
 
-// Text link
-@mixin text-link($color) {
-  position: relative;
-  &:hover {
-    color: darken($color, 25%);
-    border-bottom:solid 1px lighten($color, 50%);
-  }
-}
-
 // Shadow
 @mixin shadow-black-small {
   @include box-shadow(0, 3px, 4px, rgba(0,0,0,.6));
@@ -184,4 +182,15 @@
 // Transitions
 @mixin simple-transition {
   @include transition(all .3s ease-in-out);
+}
+
+// Text Link
+@mixin text-link($nsc, $hsc) {
+  color: $nsc;
+  @include simple-transition;
+  &:hover {
+    color: $hsc;
+    @include simple-transition;
+    text-decoration: none !important;
+  }
 }
