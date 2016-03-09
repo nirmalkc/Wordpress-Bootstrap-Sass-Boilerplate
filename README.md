@@ -2,6 +2,14 @@
 
 This is an instruction and folder structure to setup a boilerplate for developing a website with wordpress and sass. This folder structure is valid only while using [underscores.me](http://underscores.me/) generated theme.
 
+## Pre-requesties
+
+You will need to have the following tools installed in your machine to run NPM as well as GRUNT tasks.
+
+1. [node.js](https://nodejs.org/)
+2. [Ruby](http://rubyinstaller.org/)
+
+
 ## Steps to install and setup
 
 1. Go the root directory of this repository and give the below command.
@@ -10,7 +18,7 @@ This is an instruction and folder structure to setup a boilerplate for developin
 npm install
 ```
 
-2. Download the underscores theme with sassify option (advanced view) from [underscores.me](http://underscores.me/). 
+2. Download the underscores theme (without sassify in the advanced options) from [underscores.me](http://underscores.me/). 
 Extract the downloaded folder to "mytheme" folder.
 
 3. Install wordpress and create a theme directory where you may need to copy your files through a grunt task.
@@ -40,10 +48,8 @@ wptheme_staging: '<your wordpress installation theme directory>'
 
 10. Now you are set to start developing the wordpress theme.
 
+### Custom Fonts
 
-## Pre-requesties
+### Icon Fonts
 
-You will need to have the following tools installed in your machine to run NPM as well as GRUNT tasks.
-
-1. [node.js](https://nodejs.org/)
-2. [Ruby](http://rubyinstaller.org/)
+### Responsive mixins
