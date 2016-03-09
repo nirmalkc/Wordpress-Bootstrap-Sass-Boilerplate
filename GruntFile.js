@@ -18,19 +18,13 @@ module.exports = function(grunt) {
 		uglify: {
 			dist: {
 				files: [{
-					'<%= dirs.wptheme_source %>/js/vendor/bootstrap.min.js':'bower_components/twitter-bootstrap-sass/assets/javascripts/bootstrap.js'
+					'<%= dirs.wptheme_source %>/js/vendor/bootstrap.min.js':'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'
 				}]
 			}
 			
 		},
 		copy: {
 			main: {
-		    	files: [{
-		    		expand: true,
-	            	cwd: 'bower_components/twitter-bootstrap-sass/assets/fonts/',
-	            	src: ['**'],
-			    	dest: '<%= dirs.wptheme_source %>/fonts/'
-		    	}],
 		    	files: [{
 		    		expand: true,
 	            	cwd: 'src/styles/',

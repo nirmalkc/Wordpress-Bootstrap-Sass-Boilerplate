@@ -3,21 +3,21 @@
 // --------------------------
 
 // Base font face definition
-@include font-face("Roboto", $base-font-regular-url, $file-formats: ttf eot svg woff);
-@include font-face("Roboto", $base-font-italic-url, normal, italic, $file-formats: ttf eot svg woff);
-@include font-face("Roboto", $base-font-bold-url, bold, $file-formats: ttf eot svg woff); 
-@include font-face("Roboto", $base-font-bold-italic-url, bold, italic, $file-formats: ttf eot svg woff); 
+@include font-face($base-font-regular-name, $base-font-regular-url, $file-formats: ttf eot svg woff);
+@include font-face($base-font-regular-name, $base-font-italic-url, normal, italic, $file-formats: ttf eot svg woff);
+@include font-face($base-font-regular-name, $base-font-bold-url, bold, $file-formats: ttf eot svg woff); 
+@include font-face($base-font-regular-name, $base-font-bold-italic-url, bold, italic, $file-formats: ttf eot svg woff); 
 
 
 // Serif font face definition
-@include font-face("PlayfairDisplay", $base-font-serif-regular-url, $file-formats: ttf eot svg woff);
-@include font-face("PlayfairDisplay", $base-font-serif-italic-url, normal, italic, $file-formats: ttf eot svg woff);
-@include font-face("PlayfairDisplay", $base-font-serif-bold-url, bold, $file-formats: ttf eot svg woff); 
-@include font-face("PlayfairDisplay", $base-font-serif-bold-italic-url, bold, italic, $file-formats: ttf eot svg woff); 
+/* @include font-face($base-font-italic-name, $base-font-serif-regular-url, $file-formats: ttf eot svg woff);
+@include font-face($base-font-italic-name, $base-font-serif-italic-url, normal, italic, $file-formats: ttf eot svg woff);
+@include font-face($base-font-italic-name, $base-font-serif-bold-url, bold, $file-formats: ttf eot svg woff); 
+@include font-face($base-font-italic-name, $base-font-serif-bold-italic-url, bold, italic, $file-formats: ttf eot svg woff); */
 
 
 // Icon font face definition
-@include font-face("virtuostic-icons", $icon-font-url, $file-formats: ttf eot svg woff);
+@include font-face($icon-font-name, $icon-font-url, $file-formats: ttf eot svg woff);
 
 [data-icon]:before {
   font-family: $font-family-icon;
