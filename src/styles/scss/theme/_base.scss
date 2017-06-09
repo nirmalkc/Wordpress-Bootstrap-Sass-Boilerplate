@@ -9,6 +9,7 @@ body {
 	color: $theme-body-fg;
 }
 
+
 // Headings
 
 h1,h2,h3,h4,h5,h6 { 
@@ -34,7 +35,39 @@ h1,h2,h3,h4,h5,h6 {
 
 
 hr { 
-	
+	margin:$spacing-large-vertical 0; 
+	$border-color: lighten($theme-color-darkgrey, 10%);
+	border-color: $border-color;
+	position: relative; 
+
+	&:before {
+		content:'';
+		position: absolute;
+		@include box-size(0);
+		top:-23px; left: calc(50% - 2px);
+		border: 5px solid transparent;
+		border-bottom-color: $border-color;
+		line-height: 0;
+		position: relative;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		left: calc(50% - 2px);
+		top: 0;
+		@include box-size(0);
+		border: 5px solid transparent;
+		border-top-color: $border-color;
+		line-height: 0;
+	}
+
+	&.no-sign {
+		&:before, &:after { display: none; }
+	}
+
+	&.spacing-small {
+		margin: ($spacing-base-vertical * 2) 0;
+	}
 }
 
 p {	

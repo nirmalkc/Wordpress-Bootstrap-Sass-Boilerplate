@@ -28,11 +28,19 @@ $font-family-icon:					$icon-font-name !important;
 $font-family-base: 					$font-family-sans-serif;
 $font-family-secondary:				$font-family-serif;
 
-$theme-fs-bs:						14px !default;
-$theme-fs-md:			 			ceil(($theme-fs-bs * 1.30)) !default; 
-$theme-fs-lg:			 			ceil(($theme-fs-bs * 1.60)) !default; 
-$theme-fs-xl:			 			ceil(($theme-fs-bs * 2)) !default; 
-$theme-fs-sm:			 			ceil(($theme-fs-bs * 0.90)) !default; 
+$theme-fs-unit:						16px !default;
+
+$theme-fs-xs:			 			ceil(($theme-fs-unit * .80)) !default; 
+$theme-fs-sm:			 			ceil(($theme-fs-unit * .90)) !default; 
+$theme-fs-bs:						ceil(($theme-fs-unit * 1)) !default;
+$theme-fs-bsl:						ceil(($theme-fs-unit * 1.125)) !default;
+$theme-fs-md:			 			ceil(($theme-fs-unit * 1.30)) !default; 
+$theme-fs-lg:			 			ceil(($theme-fs-unit * 1.70)) !default; 
+$theme-fs-xl:			 			ceil(($theme-fs-unit * 2.2)) !default; 
+$theme-fs-xxl:			 			ceil(($theme-fs-unit * 3.4)) !default; 
+$theme-fs-xxxl:			 			ceil(($theme-fs-unit * 4.25)) !default; 
+$theme-fs-5x:			 			ceil(($theme-fs-unit * 5)) !default; 
+$theme-fs-6x:			 			ceil(($theme-fs-unit * 6)) !default; 
 
 $theme-line-height-base:			1.428571429 !default;
 $theme-line-height-large:   		1.3333333 !default; // extra decimals for Win 8.1 Chrome
@@ -88,7 +96,14 @@ $spacing-xs-horizontal:     5px !default;
 $spacing-section:			$spacing-large-vertical * 2;
 
 
-// Icon Characters
+// Spacers
+$spacing-xs:				4px;
+$spacing-sm:				8px;
+$spacing-bs:				12px;
+$spacing-md:				16px;
+$spacing-lg:				24px;
+$spacing-xl:				32px;
+$spacing-xxl:				48px;
 
 
 
@@ -96,7 +111,16 @@ $spacing-section:			$spacing-large-vertical * 2;
 // Graphics media
 //--------------------------------------------
 $theme-image-path:'../img/';
-$theme-main-logo-image: $theme-image-path + 'logo-virtuosic-arts.png';
-$theme-music-symbol-small-image: $theme-image-path + 'img-music-symbol-small.png';
-$theme-music-symbol-large-image: $theme-image-path + 'img-music-symbol-large.png';
-$theme-symbol-quotes: $theme-image-path + 'symbol-quotes.png';
+
+//--------------------------------------------
+// Responsive Breakpoints
+//--------------------------------------------
+$screen-sm-min: 768px !default;
+$screen-md-min: 992px !default;
+$screen-md-max: 1024px !default;
+$screen-lg-min: 1172px !default;
+$screen-lg-max: 1200px !default;
+$screen-xs-smax: 740px !default;
+$screen-xs-max: 568px !default;
+$screen-xs-min: 468px !default;
+$screen-base:   320px !default;
