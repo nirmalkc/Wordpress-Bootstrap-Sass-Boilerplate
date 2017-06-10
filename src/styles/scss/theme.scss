@@ -1,10 +1,12 @@
 // --------------------------
-// Theme Stylesheet
+// Theme Styles
 // --------------------------
-@import '../../../node_modules/bourbon/app/assets/stylesheets/bourbon';
+
+// Global Includes
 @import 'theme/variables';
 @import 'theme/mixins';
 
+// Dev specific includes
 @import 'theme/typography';
 @import 'theme/icons';
 @import 'theme/helpers';
