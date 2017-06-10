@@ -16,3 +16,48 @@
 @include font-face($base-font-italic-name, $base-font-serif-bold-italic-url, bold, italic, $file-formats: ttf eot svg woff); */
 
 
+// Headings
+h1,h2,h3,h4,h5,h6 { 
+  font-weight: $theme-fw-normal; 
+  font-size: $theme-fs-lg; 
+  clear: both;
+}
+
+.heading-1 { font-size: $theme-fs-bs * 2; }
+
+.heading-2 { 
+  font-family: $font-family-secondary;
+  font-size: $theme-fs-bs * 1.8;
+  margin-bottom: $theme-fs-bs * 1.6;
+}
+
+.heading-3 { 
+  font-family: $font-family-base;
+  font-size: $theme-fs-bs * 1.2; 
+  font-weight: $theme-fw-bold;
+  color: $theme-color-white;
+}
+
+.heading-4 { 
+  font-size: $theme-fs-bs * 1.4;
+}
+
+.heading-5 {
+  font-size: $theme-fs-bs * 1.2;
+}
+
+.heading-6 {
+  font-size: $theme-fs-bs;
+}
+
+// Paragraph
+p { 
+  margin-bottom: $spacer-lg;
+  font-weight: $theme-fw-normal;
+  font-size: $theme-fs-bs;
+}
+
+// Small
+small {
+  font-size: $theme-fs-sm;
+}

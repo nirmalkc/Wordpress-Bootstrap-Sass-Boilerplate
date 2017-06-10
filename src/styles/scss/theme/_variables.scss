@@ -80,30 +80,31 @@ $theme-body-fg: 			$theme-color-black;
 // Helpers
 //--------------------------------------------
 
-// Spacing variables
-$spacing-base-vertical:     6px !default;
-$spacing-base-horizontal:   12px !default;
-
-$spacing-large-vertical:    24px !default;
-$spacing-large-horizontal:  32px !default;
-
-$spacing-small-vertical:    3px !default;
-$spacing-small-horizontal:  10px !default;
-
-$spacing-xs-vertical:       1px !default;
-$spacing-xs-horizontal:     5px !default;
-
-$spacing-section:			$spacing-large-vertical * 2;
-
-
 // Spacers
-$spacing-xs:				4px;
-$spacing-sm:				8px;
-$spacing-bs:				12px;
-$spacing-md:				16px;
-$spacing-lg:				24px;
-$spacing-xl:				32px;
-$spacing-xxl:				48px;
+$spacer-none:  0;
+$spacer-xs:    4px;
+$spacer-sm:    8px;
+$spacer-base:  16px;
+$spacer-md:    24px;
+$spacer-lg:    32px;
+$spacer-xl:    48px;
+$spacer-xxl:   64px;
+
+
+$spacer-size-list: (
+    xs:     $spacer-xs,
+    sm:     $spacer-sm,
+    base:   $spacer-base,
+    md:     $spacer-md,
+    lg:     $spacer-lg,
+    none:   0
+);
+
+$spacer-sides: top right bottom left;
+$box-boundary-list: (
+    in: padding,
+    out: margin
+);
 
 
 
