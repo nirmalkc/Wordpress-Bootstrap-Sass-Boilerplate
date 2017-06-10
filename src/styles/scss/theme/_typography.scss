@@ -16,45 +16,48 @@
 @include font-face($base-font-italic-name, $base-font-serif-bold-italic-url, bold, italic, $file-formats: ttf eot svg woff); */
 
 
-// Icon font face definition
-@include font-face($icon-font-name, $icon-font-url, $file-formats: ttf eot svg woff);
-
-[data-icon]:before {
-  font-family: $font-family-icon;
-  content: attr(data-icon);
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-decoration: none !important;
-}
-.icon:before,
-[class*="icon"]:before,
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: $font-family-icon;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-decoration: none !important;
+// Headings
+h1,h2,h3,h4,h5,h6 { 
+  font-weight: $theme-fw-normal; 
+  font-size: $theme-fs-lg; 
+  clear: both;
 }
 
+.heading-1 { font-size: $theme-fs-bs * 2; }
 
-[class*="icon"]:hover, *:hover [class*="icon"] {
-  text-decoration: none;
+.heading-2 { 
+  font-family: $font-family-secondary;
+  font-size: $theme-fs-bs * 1.8;
+  margin-bottom: $theme-fs-bs * 1.6;
 }
 
-a > [class*="icon"] {
-  margin-right: .6rem;
+.heading-3 { 
+  font-family: $font-family-base;
+  font-size: $theme-fs-bs * 1.2; 
+  font-weight: $theme-fw-bold;
+  color: $theme-color-white;
 }
 
-.icon-power-off:before {
-  content: "a";
+.heading-4 { 
+  font-size: $theme-fs-bs * 1.4;
+}
+
+.heading-5 {
+  font-size: $theme-fs-bs * 1.2;
+}
+
+.heading-6 {
+  font-size: $theme-fs-bs;
+}
+
+// Paragraph
+p { 
+  margin-bottom: $spacer-lg;
+  font-weight: $theme-fw-normal;
+  font-size: $theme-fs-bs;
+}
+
+// Small
+small {
+  font-size: $theme-fs-sm;
 }
