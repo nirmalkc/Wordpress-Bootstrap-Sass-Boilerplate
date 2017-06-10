@@ -1,43 +1,50 @@
-// --------------------------
-// Mixins
-// --------------------------
+@charset "utf-8";
 
+@import '../../../../node_modules/bourbon/app/assets/stylesheets/bourbon';
+@import "../../../../node_modules/sass-flex-mixin/flex";
+
+// --------------------------
+// Generic Mixins
+// --------------------------
+// 
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
-  font-size: ($sizeValue * 16) + px;
-  font-size: $sizeValue + rem;
+	font-size: ($sizeValue * 16) + px;
+	font-size: $sizeValue + rem;
 }
 
 // Center block
 @mixin center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 // Clearfix
-@mixin clearfix() {
-  &:before, &:after {
-    content: "";
-    display: table;
-  }
-  &:after {
-    clear:both;
-  }
+// Thanks to Nicolas Gallagher (http://nicolasgallagher.com/micro-clearfix-hack)
+%clearfix {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
 }
 
-// Clear after (not all clearfix need this also)
-@mixin clearfix-after() {
-  clear: both;
-}
 
-
+// Box Sizing
 @mixin box-sizing($box-model) {
   -webkit-box-sizing: $box-model; // Safari <= 5
   -moz-box-sizing: $box-model; // Firefox <= 19
   box-sizing: $box-model;
 }
 
+// Border Radius
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   border-radius: $radius;
@@ -94,33 +101,35 @@
   }
 }
 
-
+// Opacity
 @mixin opacity($opacity) {
   opacity: $opacity;
   $opacity-ie: $opacity * 100;
   filter: alpha(opacity=$opacity-ie); //IE8
 }
 
+// Text Truncation
 @mixin text-truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+// Simple Box
 @mixin box-size($w, $h:$w) {
   width: $w;
   height: $h;
   overflow: auto;
 }
 
-
-
+// Box Shadow
 @mixin box-shadow($a, $b, $c, $color) {
   -moz-box-shadow: $a $b $c $color;
   -webkit-box-shadow: $a $b $c $color;
   box-shadow: $a $b $c $color;
 }
 
+// Circle
 @mixin draw-circle($radius, $color) {
   @include border-radius($radius/2+px);
   background-color: $color;
@@ -156,6 +165,22 @@
   }
 }
 
+// Visually hiding an element without using display:none.
+//
+// USAGE:
+//  .visually-hidden {
+//      @extend %visuallyhidden;
+//  }
+
+%visuallyhidden {
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
 
 // Grayscale
 @mixin grayscale($value) {
@@ -164,24 +189,51 @@
     filter:#{"grayscale(#{$value})"};
 }
 
-// Functions
-
-// Black and white
-@function black($opacity){
-    @return rgba(0,0,0,$opacity);
+// Responsive breakpoint mixin
+// ------------------------------
+// Usage:
+// 
+// @include breakpoint(lg) {
+//    <object-property: value>
+// }
+@mixin breakpoint($width) {
+    @if $width == lg {
+        @media only screen and (max-width:$breakpoint-lg) {
+            @content;
+        }
+    }
+    @else if $width == md {
+        @media only screen and (max-width:$breakpoint-md) {
+            @content;
+        }
+    }
+    @else if $width == sm {
+        @media only screen and (max-width:$breakpoint-sm) {
+            @content;
+        }
+    }
 }
-@function white($opacity){
-    @return rgba(255,255,255,$opacity);
-}
 
+// --------------------------
+// Project Specific Mixins
+// --------------------------
+// 
 // Shadow
-@mixin shadow-black-small {
-  @include box-shadow(0, 3px, 4px, rgba(0,0,0,.6));
+@mixin shadow-default() {
+  @include box-shadow(1px, 2px, 3px, 0, rgba(0, 0, 0, .2));
+}
+
+@mixin shadow-none() {
+  @include box-shadow(0, 0, 0, 0, rgba(0, 0, 0, 0));
+}
+
+@mixin shadow-thin() {
+  @include box-shadow(0, 1px, 1px, 0, rgba(0, 0, 0, .2));
 }
 
 // Transitions
-@mixin simple-transition {
-  @include transition(all .3s ease-in-out);
+@mixin simple-transition() {
+  @include transition(all .2s ease-in-out);
 }
 
 // Text Link
