@@ -1,6 +1,6 @@
 # Wordpress Starter theme with SASS
 
-This is an instruction and folder structure to setup a boilerplate for developing a website with wordpress and sass. This folder structure is valid only while using [underscores.me](http://underscores.me/) generated theme.
+These are the instructions and folder structure, to setup a boilerplate for developing a CMS website with wordpress using sass architecture. This folder structure is valid only while using [underscores.me](http://underscores.me/) generated theme.
 
 ## Pre-requesties
 
